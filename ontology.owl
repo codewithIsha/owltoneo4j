@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/hp/ontologies/2023/5/Office"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/hp/ontologies/2023/5/Office">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Departments"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Employees"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#External"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intern"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Internal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#International"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Junior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Local"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Marketing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Office"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Operations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Senior"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#have"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_a_kind_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_a_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sub-departments"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#types"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#createdON"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#empContact"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#empID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#empName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#joinedON"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Harry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hina"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sina"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tara"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#delhi_branch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#france_branch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mumbai_branch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#opcore"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#External"/>
+        <Class IRI="#Operations"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_Resource"/>
+        <Class IRI="#Departments"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intern"/>
+        <Class IRI="#Employees"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Internal"/>
+        <Class IRI="#Operations"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#International"/>
+        <Class IRI="#Marketing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Junior"/>
+        <Class IRI="#Employees"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Local"/>
+        <Class IRI="#Marketing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manager"/>
+        <Class IRI="#Employees"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marketing"/>
+        <Class IRI="#Departments"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Operations"/>
+        <Class IRI="#Departments"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Senior"/>
+        <Class IRI="#Employees"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Senior"/>
+        <NamedIndividual IRI="#Harry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Junior"/>
+        <NamedIndividual IRI="#Hina"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Manager"/>
+        <NamedIndividual IRI="#Sina"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Intern"/>
+        <NamedIndividual IRI="#Tara"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Local"/>
+        <NamedIndividual IRI="#delhi_branch"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#International"/>
+        <NamedIndividual IRI="#france_branch"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human_Resource"/>
+        <NamedIndividual IRI="#mumbai_branch"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Operations"/>
+        <NamedIndividual IRI="#opcore"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empContact"/>
+        <NamedIndividual IRI="#Harry"/>
+        <Literal datatypeIRI="&xsd;long">1838011001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empID"/>
+        <NamedIndividual IRI="#Harry"/>
+        <Literal datatypeIRI="&xsd;string">E-001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empName"/>
+        <NamedIndividual IRI="#Harry"/>
+        <Literal datatypeIRI="&xsd;string">Harry Riordan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#joinedON"/>
+        <NamedIndividual IRI="#Harry"/>
+        <Literal datatypeIRI="&xsd;dateTime">08-01-2018</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empContact"/>
+        <NamedIndividual IRI="#Hina"/>
+        <Literal datatypeIRI="&xsd;long">19011700132</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empID"/>
+        <NamedIndividual IRI="#Hina"/>
+        <Literal datatypeIRI="&xsd;string">E-013</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empName"/>
+        <NamedIndividual IRI="#Hina"/>
+        <Literal datatypeIRI="&xsd;string">Hina Yoshihara</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#joinedON"/>
+        <NamedIndividual IRI="#Hina"/>
+        <Literal datatypeIRI="&xsd;dateTime">09-01-2020</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empContact"/>
+        <NamedIndividual IRI="#Sina"/>
+        <Literal datatypeIRI="&xsd;long">237973101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empID"/>
+        <NamedIndividual IRI="#Sina"/>
+        <Literal datatypeIRI="&xsd;string">E-009</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empName"/>
+        <NamedIndividual IRI="#Sina"/>
+        <Literal datatypeIRI="&xsd;string">Sina Deinert</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#joinedON"/>
+        <NamedIndividual IRI="#Sina"/>
+        <Literal datatypeIRI="&xsd;dateTime">25-02-2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empContact"/>
+        <NamedIndividual IRI="#Tara"/>
+        <Literal datatypeIRI="&xsd;long">9217091001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empID"/>
+        <NamedIndividual IRI="#Tara"/>
+        <Literal datatypeIRI="&xsd;string">E-019</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#empName"/>
+        <NamedIndividual IRI="#Tara"/>
+        <Literal datatypeIRI="&xsd;string">Tara Gray</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#joinedON"/>
+        <NamedIndividual IRI="#Tara"/>
+        <Literal datatypeIRI="&xsd;dateTime">09-10-2022
+</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depID"/>
+        <NamedIndividual IRI="#delhi_branch"/>
+        <Literal datatypeIRI="&xsd;string">D-002-2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depID"/>
+        <NamedIndividual IRI="#delhi_branch"/>
+        <Literal datatypeIRI="&xsd;dateTime">18-05-2008</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#createdON"/>
+        <NamedIndividual IRI="#france_branch"/>
+        <Literal datatypeIRI="&xsd;dateTime">10-10-2010</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depID"/>
+        <NamedIndividual IRI="#france_branch"/>
+        <Literal datatypeIRI="&xsd;string">D-002-1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#createdON"/>
+        <NamedIndividual IRI="#mumbai_branch"/>
+        <Literal datatypeIRI="&xsd;dateTime">09-09-2009</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depID"/>
+        <NamedIndividual IRI="#mumbai_branch"/>
+        <Literal datatypeIRI="&xsd;string">D001-1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#createdON"/>
+        <NamedIndividual IRI="#opcore"/>
+        <Literal datatypeIRI="&xsd;dateTime">23-08-2007</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depID"/>
+        <NamedIndividual IRI="#opcore"/>
+        <Literal datatypeIRI="&xsd;string">D-003</Literal>
+    </DataPropertyAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#is_a_part_of"/>
+        <ObjectProperty IRI="#sub-departments"/>
+    </EquivalentObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#Office"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#have"/>
+        <Class IRI="#Departments"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_a_kind_of"/>
+        <Class IRI="#Departments"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_a_part_of"/>
+        <Class IRI="#Marketing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sub-departments"/>
+        <Class IRI="#Operations"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#types"/>
+        <Class IRI="#Employees"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#Departments"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#Employees"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#have"/>
+        <Class IRI="#Employees"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_a_kind_of"/>
+        <Class IRI="#Human_Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_a_kind_of"/>
+        <Class IRI="#Marketing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_a_kind_of"/>
+        <Class IRI="#Operations"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_a_part_of"/>
+        <Class IRI="#International"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_a_part_of"/>
+        <Class IRI="#Local"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sub-departments"/>
+        <Class IRI="#External"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sub-departments"/>
+        <Class IRI="#Internal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#types"/>
+        <Class IRI="#Intern"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#types"/>
+        <Class IRI="#Junior"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#types"/>
+        <Class IRI="#Manager"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#types"/>
+        <Class IRI="#Senior"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#createdON"/>
+        <Class IRI="#Departments"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depID"/>
+        <Class IRI="#Departments"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#empContact"/>
+        <Class IRI="#Employees"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#empID"/>
+        <Class IRI="#Employees"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#empName"/>
+        <Class IRI="#Employees"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#joinedON"/>
+        <Class IRI="#Employees"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#createdON"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#empContact"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#empID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#empName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#joinedON"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
