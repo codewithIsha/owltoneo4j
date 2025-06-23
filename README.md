@@ -98,8 +98,8 @@ Run cipherQueriesOfiice.txt in Neo4j Browser to create a company structure with:
 python main.py
 pip install owlready2 py2neo
 
-
-## .📜 License
+```
+## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
 
