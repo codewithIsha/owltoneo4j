@@ -1,0 +1,79 @@
+// 🌐 Organization Graph Creation Script (Refactored)
+
+// === Entity Nodes ===
+CREATE (:Headquarters {label: 'Headquarters'})
+CREATE (:Staff {label: 'Staff'})
+CREATE (:Divisions {label: 'Divisions'})
+
+// === Division Types ===
+CREATE (:DivisionType {type: 'Growth'})
+CREATE (:DivisionType {type: 'Support'})
+CREATE (:DivisionType {type: 'Delivery'})
+
+// === Subdivisions ===
+CREATE (:Branch {branch_name: 'paris_unit', branch_code: 'BR-102', launched_on: '2011-11-11'})
+CREATE (:Branch {branch_name: 'bangalore_unit', branch_code: 'BR-103', launched_on: '2009-03-15'})
+CREATE (:Branch {branch_name: 'pune_unit', branch_code: 'BR-104', launched_on: '2007-06-25'})
+
+// === Subdivision Categories ===
+CREATE (:Category {name: 'Domestic'})
+CREATE (:Category {name: 'International'})
+
+// === Staff Roles ===
+CREATE (:Role {name: 'Project_Lead', emp_name: 'Nikhil Sharma', emp_id: 'EMP-021', joined_on: '2014-07-01', contact: '9900023456'})
+CREATE (:Role {name: 'Engineer_Level2', emp_name: 'Meera Nair', emp_id: 'EMP-043', joined_on: '2017-12-20', contact: '9744499100'})
+CREATE (:Role {name: 'Trainee_Engineer', emp_name: 'Suman Roy', emp_id: 'EMP-078', joined_on: '2022-10-01', contact: '9823001234'})
+CREATE (:Role {name: 'Junior_Analyst', emp_name: 'Devika Kundu', emp_id: 'EMP-034', joined_on: '2020-08-10', contact: '9876543210'})
+
+// === Relationships ===
+
+// Headquarter to Staff & Divisions
+MATCH (hq:Headquarters {label: 'Headquarters'}), (s:Staff {label: 'Staff'})
+CREATE (hq)-[:EMPLOYS]->(s)
+
+MATCH (hq:Headquarters), (d:Divisions {label: 'Divisions'})
+CREATE (hq)-[:CONTAINS]->(d)
+
+// Divisions and their types
+MATCH (d:Divisions), (t:DivisionType {type: 'Growth'})
+CREATE (d)-[:CLASSIFIED_AS]->(t)
+
+MATCH (d:Divisions), (t:DivisionType {type: 'Support'})
+CREATE (d)-[:CLASSIFIED_AS]->(t)
+
+MATCH (d:Divisions), (t:DivisionType {type: 'Delivery'})
+CREATE (d)-[:CLASSIFIED_AS]->(t)
+
+// Growth division subdivisions
+MATCH (t:DivisionType {type: 'Growth'}), (b:Branch {branch_name: 'bangalore_unit'})
+CREATE (t)-[:HAS_BRANCH]->(b)
+
+MATCH (t:DivisionType {type: 'Growth'}), (b:Branch {branch_name: 'paris_unit'})
+CREATE (t)-[:HAS_BRANCH]->(b)
+
+// Support division subdivision
+MATCH (t:DivisionType {type: 'Support'}), (b:Branch {branch_name: 'pune_unit'})
+CREATE (t)-[:HAS_BRANCH]->(b)
+
+// Category mapping for branches
+MATCH (b:Branch {branch_name: 'paris_unit'}), (c:Category {name: 'International'})
+CREATE (b)-[:CATEGORIZED_AS]->(c)
+
+MATCH (b:Branch {branch_name: 'bangalore_unit'}), (c:Category {name: 'Domestic'})
+CREATE (b)-[:CATEGORIZED_AS]->(c)
+
+MATCH (b:Branch {branch_name: 'pune_unit'}), (c:Category {name: 'Domestic'})
+CREATE (b)-[:CATEGORIZED_AS]->(c)
+
+// Staff types
+MATCH (s:Staff), (r:Role {name: 'Project_Lead'})
+CREATE (s)-[:ROLE_OF]->(r)
+
+MATCH (s:Staff), (r:Role {name: 'Engineer_Level2'})
+CREATE (s)-[:ROLE_OF]->(r)
+
+MATCH (s:Staff), (r:Role {name: 'Trainee_Engineer'})
+CREATE (s)-[:ROLE_OF]->(r)
+
+MATCH (s:Staff), (r:Role {name: 'Junior_Analyst'})
+CREATE (s)-[:ROLE_OF]->(r)
