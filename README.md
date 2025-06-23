@@ -18,6 +18,15 @@ It reflects my internship work involving semantic data engineering, biomedical d
 
 ---
 
+## 📚 Supporting Research
+
+Explore my extended research work in biomedical graph modeling:
+
+🔗 [🧠 Research Findings Repository](https://github.com/Jeri-jose/kgraph/tree/main/Sneha)
+
+---
+---
+
 ## 🧪 Technologies Used
 
 | Tool         | Purpose                           |
@@ -91,6 +100,7 @@ Run cipherQueriesOfiice.txt in Neo4j Browser to create a company structure with:
 - Roles: Manager, Intern, etc.
 
 - Relations like HAS, TYPES, SUB_DEPARTMENT
+
 
 ### ▶️ Run the Script
 
