@@ -50,7 +50,7 @@ The OWL ontology used in this project (`ontology.owl`) was created and edited us
 
 ---
 
-# OWL to Neo4j Converter
+# 🦉➡️ 🧠 OWL to Neo4j Converter
 
 This Python script converts an OWL ontology into a Neo4j graph database. It creates nodes for classes, individuals, and object properties, and establishes relationships between them in the Neo4j database.
 
@@ -92,15 +92,17 @@ Run cipherQueriesOfiice.txt in Neo4j Browser to create a company structure with:
 
 - Relations like HAS, TYPES, SUB_DEPARTMENT
 
+### ▶️ Run the Script
+
 ```bash
+python main.py
 pip install owlready2 py2neo
 
 
-## License
+## .📜 License
 
 This project is licensed under the [MIT License](LICENSE).
 
-Please note that you should replace `"your-username"` and `"your-repository"` with your actual GitHub username and repository name, respectively.
 
 
 
